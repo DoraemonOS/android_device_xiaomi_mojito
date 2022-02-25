@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The PixelExperience Project
+# Copyright (C) 2021 The DoraemonOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -16,13 +16,17 @@ TARGET_USES_AOSP_RECOVERY := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/dora/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_mojito
+PRODUCT_NAME := dora_mojito
 PRODUCT_DEVICE := mojito
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 10
 PRODUCT_MANUFACTURER := Xiaomi
+
+# Maintainer Properties
+DORA_BUILD_TYPE := OFFICIAL
+DORA_MAINTAINER := KernelPanix
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
